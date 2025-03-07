@@ -3,7 +3,7 @@
 
 >机器人是控制理论应用的一个场景，需要的控制理论从简单到复杂，适用于不同的场景，下面从简单的说起
 
-## 闭环控制(Closed-loop control)
+## 闭环控制 (Closed-loop control)
 
 ### Basic conception
 
@@ -11,11 +11,11 @@
 
 在一些基础的控制算法中（如PID），得到误差后可以根据其计算出输出量
 
-
+其中有**负反馈调节**，与**正反馈调节**
 
 ### PID Controller
 
->PID控制算法蕴含着控制的基本思想，在后面的LQR, MPC, H无穷等算法中也有它的影子
+
 
 TODO:
 
@@ -27,11 +27,17 @@ TODO:
 
 
 
-## 前馈控制(Feed Forward Control)
+## 前馈控制 (Feed Forward Control)
 
+前馈控制如其名，目的是在目标量来临前给予一定的控制量，使其响应更快
 
-
-
+$$
+\begin{matrix}{}
+u_{ff}=k*error\\
+error=\text{target}_i-\text{target}_{i-1}
+\end{matrix}
+$$
+前馈的控制量$u_{ff}$**没有反馈过程**，所以它是开环控制
 
 ## 运动学解算
 
